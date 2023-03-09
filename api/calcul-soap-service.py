@@ -1,5 +1,4 @@
-from spyne import Application, rpc, ServiceBase, Integer, Unicode , Decimal
-from spyne import Iterable
+from spyne import Application, rpc, ServiceBase, Decimal
 from spyne.protocol.soap import Soap11
 from spyne.server.wsgi import WsgiApplication
 from wsgiref.simple_server import make_server
@@ -19,8 +18,6 @@ class CalculService(ServiceBase):
 
         # Temps total de trajet avec recharges
         temps_trajet_total = temps_trajet + temps_recharge_total
-        
-        print(temps_trajet_total)
 
         return temps_trajet_total
 
